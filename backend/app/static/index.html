@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c0c0e"><meta name="description" content="Личный календарь подписок и обязательных платежей">
+  <title>Платёжник — подписки и платежи</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" type="module"></script>
+</head>
+<body class="auth-screen">
+  <div id="connection" class="connection" role="status" hidden>Нет соединения. Данные могли устареть.</div>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Платёжник, главная"><span class="brand-mark">₽</span><span>Платёжник<small>ТВОЙ ПОРЯДОК В ПЛАТЕЖАХ</small></span></a>
+      <nav aria-label="Разделы"><button class="nav active" data-view="payments"><span data-icon="home"></span>Обзор</button><button class="nav" data-view="calendar"><span data-icon="calendar"></span>Календарь</button><button class="nav" data-view="subscriptions"><span data-icon="wallet"></span>Обязательства</button><button class="nav" data-view="history"><span data-icon="history"></span>История</button></nav>
+      <div class="sidebar-note">Всё важное — вовремя.<p>Рубли · Иркутск<br>Напоминания в 11:00</p></div>
+      <div class="owner"><div class="avatar">Я</div><div>Личное пространство<small>Доступ только тебе</small></div><button id="logout" class="icon-button" aria-label="Выйти" title="Выйти" hidden><span data-icon="logout"></span></button></div>
+    </aside>
+    <main>
+      <div class="mobile-brand"><span class="brand-mark">₽</span><b>Платёжник</b><span class="private-label">ЛИЧНОЕ</span></div>
+      <header class="topbar"><div><span class="eyebrow" id="today-label">ЛИЧНЫЙ КАЛЕНДАРЬ</span><h1 id="page-title">Мои платежи</h1><p id="page-subtitle">Подписки, счета и важные даты.</p></div><button id="create-button" class="button primary"><span data-icon="plus"></span>Добавить</button></header>
+      <section id="auth-panel" class="auth-panel">
+        <span class="large-icon" data-icon="wallet"></span><h2 id="auth-title">Вход в Платёжник</h2><p id="auth-text">Войди по одноразовому коду из Telegram.</p>
+        <form id="login-form" hidden><label>Локальный токен<input id="local-token" type="password" autocomplete="off" required placeholder="Токен из .env"></label><button class="button primary" type="submit">Войти</button></form>
+        <form id="browser-login-form"><p>Получи код в Telegram командой <strong>/login</strong> и введи его ниже. Код действует 5 минут.</p><label>Одноразовый код<input id="browser-code" type="password" autocomplete="one-time-code" placeholder="XXXX-XXXX-XXXX" maxlength="80" required></label><button class="button primary" type="submit">Войти в браузере</button><p class="help">Вход сохраняется на 7 дней. Выйти со всех устройств: /logout в боте.</p></form>
+      </section>
+      <div id="browser-session-bar" class="browser-session-bar" hidden><span>Личное пространство · вход через Telegram</span><button id="browser-logout" class="text-button">Выйти</button></div>
+      <div id="workspace" hidden>
+        <section id="stats" class="stats" aria-label="Итоги месяца">
+          <article class="stat hero-card"><span><span data-icon="wallet"></span>Осталось в этом месяце</span><strong id="remaining-total">—</strong><small id="remaining-caption">По начислениям текущего месяца</small><div class="hero-bottom"><span>Всего начислено <b id="month-total">—</b></span><span class="hero-chip" id="month-count">—</span></div></article>
+          <article class="stat"><span>Внесено в этом месяце <i data-icon="check"></i></span><strong id="paid-total">—</strong><small>По датам оплаты · с учётом исправлений</small></article>
+          <article class="stat overdue-stat"><span>Старые долги <i data-icon="clock"></i></span><strong id="overdue-total">—</strong><small id="overdue-caption">Просроченные платежи</small></article>
+        </section>
+        <div id="quick-actions" class="quick-actions"><button id="quick-add"><span data-icon="plus"></span>Добавить</button><button data-view="calendar"><span data-icon="calendar"></span>Календарь</button><button data-view="subscriptions"><span data-icon="wallet"></span>Обязательства</button></div>
+        <section id="next-panel" class="next-panel" hidden><div class="next-icon" id="next-icon" data-icon="clock"></div><div class="next-copy"><span class="eyebrow">БЛИЖАЙШИЙ ПЛАТЁЖ</span><h2 id="next-title"></h2><p id="next-date"></p></div><div class="next-amount" id="next-amount"></div><button class="button subtle" id="next-pay">Оплатить<span data-icon="arrow"></span></button></section>
+        <section id="calendar-panel" class="calendar-panel" hidden aria-label="Календарь платежей">
+          <div class="calendar-heading"><div><span class="eyebrow">ПЛАТЕЖИ ПО ДНЯМ</span><h2 id="calendar-month"></h2></div><div class="calendar-controls"><button id="calendar-today" class="button compact">Сегодня</button><button id="calendar-prev" class="icon-button" aria-label="Предыдущий месяц"><span data-icon="back"></span></button><button id="calendar-next" class="icon-button" aria-label="Следующий месяц"><span data-icon="chevron"></span></button></div></div>
+          <div class="calendar-weekdays" aria-hidden="true"><span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span></div><div id="calendar-grid" class="calendar-grid"></div>
+          <div class="calendar-legend"><span><i class="legend-dot"></i>Есть платёж</span><span><i class="legend-dot overdue-dot"></i>Просрочен</span><span><i class="legend-dot paid-dot"></i>Оплачен</span></div>
+          <div class="calendar-summary"><span id="calendar-summary"></span><button id="calendar-all" class="text-button">Показать весь месяц</button></div>
+        </section>
+        <section class="content-panel">
+          <div class="panel-heading"><div><h2 id="list-heading">Платежи месяца</h2><span id="list-count" class="count"></span></div><div class="tools"><label class="search"><span data-icon="search"></span><input id="search" type="search" placeholder="Найти" aria-label="Найти платёж"></label><button id="refresh" class="icon-button" aria-label="Обновить" title="Обновить"><span data-icon="refresh"></span></button></div></div>
+          <div id="obligation-filters" class="filters" hidden><div class="tabs" role="group" aria-label="Список обязательств"><button class="tab active" data-archive="active">Действующие</button><button class="tab" data-archive="archived">Архив</button></div></div>
+          <div id="payment-filters" class="filters"><div class="tabs" role="group" aria-label="Статус"><button class="tab active" data-filter="open">Предстоящие</button><button class="tab" data-filter="overdue">Просроченные</button><button class="tab" data-filter="paid">Оплаченные</button><button class="tab" data-filter="all">Все</button></div><label class="month-control"><select id="period" aria-label="Период"><option value="month" selected>Этот месяц</option><option value="next">Следующий месяц</option><option value="all">Все даты</option></select></label></div>
+          <div id="list" class="list" aria-live="polite"></div><div id="empty" class="empty" hidden><span data-icon="check"></span><h3>Здесь пока спокойно</h3><p>Добавь первое обязательство.</p></div>
+        </section>
+        <footer class="footer"><span>Платёжник · всё учтено</span><span>RUB · Asia/Irkutsk</span></footer>
+      </div>
+    </main>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Навигация" hidden><button data-view="payments" class="active"><span data-icon="home"></span><small>Обзор</small></button><button data-view="calendar"><span data-icon="calendar"></span><small>Календарь</small></button><button id="mobile-add" class="mobile-add"><span data-icon="plus"></span><small>Добавить</small></button><button data-view="subscriptions"><span data-icon="wallet"></span><small>Обязательства</small></button><button data-view="history"><span data-icon="history"></span><small>История</small></button></nav>
+  <dialog id="modal"><div class="dialog-heading"><div><span id="dialog-eyebrow" class="eyebrow">ПЛАТЁЖНИК</span><h2 id="dialog-title"></h2></div><button class="icon-button" id="close-modal" aria-label="Закрыть"><span data-icon="close"></span></button></div><div id="dialog-body"></div></dialog><div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

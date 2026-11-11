@@ -1,0 +1,92 @@
+name: platezhnik
+
+x-app: &app
+  build: ./backend
+  image: platezhnik-backend:1.4.0
+  environment: &app-env
+    DATABASE_URL: postgresql+psycopg://platezhnik:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/platezhnik
+    OWNER_TELEGRAM_ID: ${OWNER_TELEGRAM_ID:?Set OWNER_TELEGRAM_ID}
+    AUTH_MODE: ${AUTH_MODE:-telegram}
+    LOCAL_API_TOKEN: ${LOCAL_API_TOKEN:-}
+    TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+    TELEGRAM_NOTIFICATIONS_ENABLED: ${TELEGRAM_NOTIFICATIONS_ENABLED:-false}
+    INIT_DATA_MAX_AGE_SECONDS: ${INIT_DATA_MAX_AGE_SECONDS:-3600}
+  restart: unless-stopped
+
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_USER: platezhnik
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: platezhnik
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U platezhnik -d platezhnik"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  migrate:
+    <<: *app
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    <<: *app
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  worker:
+    <<: *app
+    command: ["python", "-m", "app.worker"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  test-db:
+    image: postgres:17-bookworm
+    profiles: ["test"]
+    environment:
+      POSTGRES_USER: platezhnik
+      POSTGRES_PASSWORD: test-only-password
+      POSTGRES_DB: platezhnik_test
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U platezhnik -d platezhnik_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  tests:
+    <<: *app
+    profiles: ["test"]
+    restart: "no"
+    environment:
+      DATABASE_URL: postgresql+psycopg://platezhnik:test-only-password@test-db:5432/platezhnik_test
+      TEST_DATABASE_URL: postgresql+psycopg://platezhnik:test-only-password@test-db:5432/platezhnik_test
+      AUTH_MODE: local
+      LOCAL_API_TOKEN: test-only-api-token-at-least-32-characters
+      OWNER_TELEGRAM_ID: "1"
+      TELEGRAM_NOTIFICATIONS_ENABLED: "false"
+    command: ["sh", "-c", "alembic upgrade head && alembic check && pytest -q -p no:cacheprovider"]
+    depends_on:
+      test-db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

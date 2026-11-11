@@ -1,0 +1,488 @@
+[
+  {
+    "brand": "sbermobile",
+    "source": "https://sbermobile.ru/favicon.png",
+    "file": "sbermobile.png"
+  },
+  {
+    "brand": "mts",
+    "source": "https://static.mts.ru/mts_rf/images/favicon-eco/favicon.svg",
+    "file": "mts.svg"
+  },
+  {
+    "brand": "openai",
+    "source": "https://raw.githubusercontent.com/twbs/icons/main/icons/openai.svg",
+    "file": "openai.svg",
+    "license": "MIT (Bootstrap Icons)"
+  },
+  {
+    "brand": "yandex",
+    "source": "https://yandex.ru/favicon.ico",
+    "file": "yandex.ico"
+  },
+  {
+    "brand": "rostelecom",
+    "source": "https://www.company.rt.ru/img/base/favicon.ico?v=03102018",
+    "file": "rostelecom.ico"
+  },
+  {
+    "brand": "claude",
+    "file": "claude.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "anthropic",
+    "file": "anthropic.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "googlegemini",
+    "file": "googlegemini.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "perplexity",
+    "file": "perplexity.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "deepseek",
+    "file": "deepseek.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "mistralai",
+    "file": "mistralai.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "githubcopilot",
+    "file": "githubcopilot.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "cursor",
+    "file": "cursor.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "huggingface",
+    "file": "huggingface.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "elevenlabs",
+    "file": "elevenlabs.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "replicate",
+    "file": "replicate.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "notion",
+    "file": "notion.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "spotify",
+    "file": "spotify.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "netflix",
+    "file": "netflix.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "youtubemusic",
+    "file": "youtubemusic.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "youtube",
+    "file": "youtube.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "applemusic",
+    "file": "applemusic.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "icloud",
+    "file": "icloud.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "apple",
+    "file": "apple.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "dropbox",
+    "file": "dropbox.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "googledrive",
+    "file": "googledrive.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "figma",
+    "file": "figma.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "zoom",
+    "file": "zoom.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "telegram",
+    "file": "telegram.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "discord",
+    "file": "discord.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "vk",
+    "file": "vk.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "twitch",
+    "file": "twitch.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "steam",
+    "file": "steam.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "playstation",
+    "file": "playstation.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "patreon",
+    "file": "patreon.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "boosty",
+    "file": "boosty.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "audible",
+    "file": "audible.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "duolingo",
+    "file": "duolingo.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "coursera",
+    "file": "coursera.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "udemy",
+    "file": "udemy.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "digitalocean",
+    "file": "digitalocean.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "hetzner",
+    "file": "hetzner.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "cloudflare",
+    "file": "cloudflare.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "vultr",
+    "file": "vultr.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "ovh",
+    "file": "ovh.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "protonvpn",
+    "file": "protonvpn.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "nordvpn",
+    "file": "nordvpn.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "surfshark",
+    "file": "surfshark.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "expressvpn",
+    "file": "expressvpn.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "kaspersky",
+    "file": "kaspersky.svg",
+    "source": "https://github.com/simple-icons/simple-icons/tree/16.36.0/icons",
+    "license": "CC0-1.0; trademark rights remain with owners"
+  },
+  {
+    "brand": "grok",
+    "file": "grok.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "midjourney",
+    "file": "midjourney.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "gigachat",
+    "file": "gigachat.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "qwen",
+    "file": "qwen.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "suno",
+    "file": "suno.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "runway",
+    "file": "runway.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "adobe",
+    "file": "adobe.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "canva",
+    "file": "canva.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "microsoft365",
+    "file": "microsoft365.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "googleone",
+    "file": "googleone.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "xbox",
+    "file": "xbox.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "nintendo",
+    "file": "nintendo.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "beeline",
+    "file": "beeline.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "megafon",
+    "file": "megafon.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "yota",
+    "file": "yota.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "domru",
+    "file": "domru.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "ttk",
+    "file": "ttk.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "sibs",
+    "file": "sibs.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "orion",
+    "file": "orion.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "akado",
+    "file": "akado.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "mgts",
+    "file": "mgts.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "tinkoff",
+    "file": "tinkoff.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "sberprime",
+    "file": "sberprime.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "ivi",
+    "file": "ivi.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "okko",
+    "file": "okko.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "wink",
+    "file": "wink.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "kion",
+    "file": "kion.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "start",
+    "file": "start.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "premier",
+    "file": "premier.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "amediateka",
+    "file": "amediateka.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "litres",
+    "file": "litres.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "bookmate",
+    "file": "bookmate.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "ozon",
+    "file": "ozon.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "wb",
+    "file": "wb.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "timeweb",
+    "file": "timeweb.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "selectel",
+    "file": "selectel.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "reg",
+    "file": "reg.svg",
+    "source": "Original local text badge; not an official logo"
+  },
+  {
+    "brand": "nic",
+    "file": "nic.svg",
+    "source": "Original local text badge; not an official logo"
+  }
+]

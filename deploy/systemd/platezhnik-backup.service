@@ -1,0 +1,10 @@
+[Unit]
+Description=Platezhnik PostgreSQL backup
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/platezhnik
+ExecStart=/usr/bin/bash /opt/platezhnik/scripts/backup.sh
+UMask=0077

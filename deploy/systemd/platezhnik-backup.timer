@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Platezhnik backup at 03:15 Irkutsk
+
+[Timer]
+OnCalendar=*-*-* 03:15:00 Asia/Irkutsk
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target
